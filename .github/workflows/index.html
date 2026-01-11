@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fina's</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png" />
+
+  <!-- External Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Our Local CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black text-white">
+
+<!-- Video Background Section -->
+<div class="relative h-[100vh] w-full overflow-hidden" id="home">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="images/video2.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-transparent z-50">
+    <div class="container mx-auto flex justify-between items-center p-4 text-white">
+      <div class="flex items-center space-x-3">
+        <img src="images/Logo.png" alt="Fina's Logo" class="h-20 md:h-24">
+        <h1 class="text-2xl font-bold text-purple-400">Fina's</h1>
+      </div>
+
+      <div class="flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-purple-400">Home</a>
+        <a href="#menu" class="hover:text-purple-400">Menu</a>
+        <a href="#about" class="hover:text-purple-400">About</a>
+        <a href="#reservation" class="hover:text-purple-400">Reservation</a>
+        <a href="#contact" class="hover:text-purple-400">Contact</a>
+        <a href="#reservation" class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded-full">
+          Book a Table
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Text -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+    <h2 class="text-5xl md:text-6xl font-bold text-purple-400 mb-4">Welcome to Fina’s</h2>
+    <p class="text-lg md:text-xl mb-6">Taste the elegance of African flavors</p>
+    <a href="#menu" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full shadow-lg">Explore Menu</a>
+  </div>
+</div>
+
+<!-- Menu Section -->
+<section id="menu" class="py-16 bg-black" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-10">
+    <h3 class="text-3xl font-bold mb-4 text-purple-400">Our Signature Dishes</h3>
+    <p class="text-gray-300">Delicious Meals Crafted with Passion</p>
+  </div>
+  <div id="dishMenu" class="grid md:grid-cols-4 gap-6 container mx-auto px-4"></div>
+</section>
+
+<!-- Drinks Section -->
+<section id="drinks" class="py-16 bg-black" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-10">
+    <h3 class="text-3xl font-bold mb-4 text-purple-400">Our Signature Drinks</h3>
+    <p class="text-gray-300">Refreshing Taste in Every Sip</p>
+  </div>
+  <div id="drinkMenu" class="grid md:grid-cols-4 gap-6 container mx-auto px-4"></div>
+</section>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar hidden">
+  <h3 class="text-2xl font-bold text-purple-400 mb-4">Your Cart</h3>
+  <div id="cartItems" class="space-y-4 mb-6 max-h-[60vh] overflow-y-auto"></div>
+  <p class="text-lg font-semibold mb-4">Total: <span id="cartTotal">0</span> GMD</p>
+  <button id="closeCart" class="w-full bg-purple-600 py-2 rounded-lg">Close</button>
+</div>
+
+<button id="cartButton" class="cart-button">🛒</button>
+
+<!-- Our Local JavaScript -->
+<script src="js/script.js"></script>
+
+<!-- External Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
